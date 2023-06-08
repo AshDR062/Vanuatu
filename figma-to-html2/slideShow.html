@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            animation: change-bg 10s steps(2, jump-none) forwards infinite;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: '100vw';
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="demo" style="animation: change-bg 10s steps(2, jump-none) forwards infinite;
+    background-repeat: no-repeat;">
+        slides
+    </div>
+    <script>
+        document.getElementsByClassName('hero').backgroundImage("./images/countriesImages/vanuatu_1.png")
+        const slides = [
+            './images/vanuatu_10.png',
+            './images/vanuatu_13.png',
+            './images/vanuatu_14.png',
+            './images/vanuatu_15.png',
+            './images/vanuatu_16.png',
+            './images/vanuatu_17.png',
+            './images/vanuatu_18.png',
+            './images/vanuatu_19.png',
+            './images/vanuatu_20.png',
+        ];
+
+        let index = 0;
+
+
+        setInterval(() => {
+            document.body.style.backgroundImage = `url(${slides[index]})`;
+            index = index < slides.length - 1 ? index + 1 : 0;
+        }, 2000); // every 2 seconds
+
+
+      
+    </script>
+</body>
+
+</html>

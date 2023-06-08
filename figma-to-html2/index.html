@@ -13,21 +13,149 @@
                 height: auto;
             }
         }
+
+        #slideshow-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .active {
+            opacity: 1;
+        }
+
+        .dot-container {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #bbb;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .active-dot {
+            background-color: #717171;
+        }
     </style>
 </head>
 
 <body>
+
     <div class="mainContainer">
         <div class="hero">
+            
+
+
             <!-- <video autoplay loop muted plays-inline class="bg-video">
                 <source src="./videos/WhatsApp Video 2023-06-05 at 18.16.00.mp4" type="video/mp4" />
             </video> -->
             <div class="Video-Content">
+
                 <nav>
-                    <!-- <div class="v45_282"></div><span class="v45_283">E xpat Excellency</span> -->
-                    <div class="logo">
-                        <img src="./images/v45_299.png" height="80" width="80" alt="">
+                    <div id="slideshow-container">
+                        <!-- <div class="slide active">
+                            <img src="./images/countriesImages/vanuatu_1.png">
+                        </div> -->
+                        <div class="slide">
+                            <img src="./images/countriesImages/vanuatu_2.png">
+                        </div>
+                        <div class="slide">
+                            <img src="./images/countriesImages/vanuatu_3.png">
+                        </div>
+                        <div class="slide">
+                            <img src="./images/countriesImages/vanuatu_4.png">
+                        </div>
+                        <div class="slide">
+                            <img src="./images/countriesImages/vanuatu_5.png">
+                        </div>
+                        <div class="slide">
+                            <img src="./images/countriesImages/vanuatu_6.png">
+                        </div>
+                        <div class="slide">
+                            <img src="./images/countriesImages/vanuatu_7.png">
+                        </div>
+                        <div class="slide">
+                            <img src="./images/countriesImages/vanuatu_8.png">
+                        </div>
+                        <div class="slide">
+                            <img src="./images/countriesImages/vanuatu_9.png">
+                        </div>
+                        <div class="slide">
+                            <img src="./images/countriesImages/vanuatu_11.png">
+                        </div>
+                        <div class="slide">
+                            <img src="./images/countriesImages/vanuatu_12.png">
+                        </div>
+                        <div class="slide">
+                            <img src="./images/countriesImages/vanuatu_13.png">
+                        </div>
+                        <div class="slide">
+                            <img src="./images/countriesImages/vanuatu_14.png">
+                        </div>
+                        <div class="slide">
+                            <img src="./images/countriesImages/vanuatu_15.png">
+                        </div>
+                        <div class="slide">
+                            <img src="./images/countriesImages/vanuatu_16.png">
+                        </div>
+                        <div class="slide">
+                            <img src="./images/countriesImages/vanuatu_17.png">
+                        </div>
+                        <div class="slide">
+                            <img src="./images/countriesImages/vanuatu_18.png">
+                        </div>
+                        <div class="slide">
+                            <img src="./images/countriesImages/vanuatu_19.png">
+                        </div>
                     </div>
+                    <div class="dot-container">
+                        <span class="dot active-dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+        
+                    </div>
+                    <!-- <div class="v45_282"></div><span class="v45_283">E xpat Excellency</span> -->
+                    <!-- <div class="logo">
+                        <img src="./images/v45_299.png" height="80" width="80" alt="">
+                    </div> -->
                     <div class="navBarMenu">
                         <li><a class="navBarLinks" href="#">Citizenship</a></li>
                         <li><a class="navBarLinks" href="#">Residency</a></li>
@@ -100,7 +228,7 @@
 
                 <!-- <div class="v107_111"></div> -->
             </div>
-            <div class="benefitsRow2">
+            <!-- <div class="benefitsRow2">
                 <div class="benefitsRow2CardLeft">
                     <div style="color: #04A1FB ;font-size: 200px;font-weight: 500px;opacity:0.2;font-family: Poppins;">
                         01
@@ -116,7 +244,7 @@
                 <div class="benefitsRow2CardRight">
                     <img src="./images/benefitsRow2.jpg" height="100" width="100">
                 </div>
-            </div>
+            </div> -->
             <div class="benefitsRow3">
                 <p class="benefitsRow3Title">
                     Key Benefits of Working With Us
@@ -170,22 +298,64 @@
                         Every year
                         property prices
                         in Europe rise by</div>
-
-
                 </div>
-
-
-                <!-- <div class="v45_335">
-                <div class="v45_337"><span class="v45_338">Hassle free travel across the globe, including
-                        Schengen zone, UK, USA and China.</span><span class="v45_340">125+</span></div>
-                <span class="v45_339">visa free
-                    countries</span>
-                <span class="v45_341">5%</span><span class="v45_342">Every year
-                    property prices
-                    in Europe rise by</span>
-            </div> -->
+            </div>
+            <div class="benefitsRow2">
+                <div class="benefitsRow2CardLeft">
+                    <div style="color: #04A1FB ;font-size: 200px;font-weight: 500px;opacity:0.2;font-family: Poppins;">
+                        01
+                    </div>
+                    <div style="color: #002B7E; font-weight:500px; font-size:36px;font-family: Poppins;">
+                        High Quality Life
+                    </div>
+                    <div style="color: #002B7E;font-size: 20px;font-weight: 500px;font-family: Poppins;  width: 426px;">
+                        Opportunity to live int the palce of your desire while running the bussiness and giving the
+                        best education to your children
+                    </div>
+                </div>
+                <div class="benefitsRow2CardRight">
+                    <img src="./images/benefitsRow2.jpg" height="100" width="100">
+                </div>
             </div>
         </div>
+        <script>
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.dot');
+
+            let currentSlide = 0;
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    if (i === index) {
+                        slide.classList.add('active');
+                        dots[i].classList.add('active-dot');
+                    } else {
+                        slide.classList.remove('active');
+                        dots[i].classList.remove('active-dot');
+                    }
+                });
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }
+
+            function previousSlide() {
+                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                showSlide(currentSlide);
+            }
+
+            setInterval(nextSlide, 3000); // Change slide every 3 seconds
+
+            dots.forEach((dot, i) => {
+                dot.addEventListener('click', () => {
+                    currentSlide = i;
+                    showSlide(currentSlide);
+                });
+            });
+        </script>
+
 </body>
 
 </html>
